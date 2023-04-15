@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+:root {
+  --ff-serif: 'Fraunces', serif;
+  --ff-sans: 'Montserrat', sans-serif;
+  --ff-serif-700: 700;
+  --ff-sans-500: 500;
+  --ff-sans-700: 700;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: hsl(30, 38%, 92%);
+}
+
+picture {
+  height: 100%;
+  width: 100%;
+}
+
+img {
+  height: 100%;
+  width: 100%;
+}
+
+.main-container {
+  width: calc(375px - 2rem);
+  padding-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  background-color: hsl(0, 0%, 100%);
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.description-container {
+  width: 100%;
+  padding: 0 1.25rem;
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.description-container h3 {
+  font-family: var(--ff-sans);
+  font-weight: var(--ff-serif-500);
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: hsla(228, 12%, 48%, 75%);
+}
+
+.description-container h1 {
+  font-family: var(--ff-serif);
+  font-weight: var(--ff-serif-700);
+  line-height: 1;
+}
+
+.description-container p {
+  font-family: var(--ff-sans);
+  font-weight: var(--ff-serif-500);
+  font-size: 0.875rem;
+  color: hsla(228, 12%, 48%, 75%);
+  line-height: 1.5;
+}
+
+.price-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.price-container h1 {
+  font-family: var(--ff-serif);
+  font-weight: var(--ff-serif-700);
+  color: hsl(158, 36%, 37%);
+}
+
+.price-container p {
+  font-family: var(--ff-sans);
+  font-weight: var(--ff-serif-500);
+  font-size: 0.875rem;
+  color: hsla(228, 12%, 48%, 75%);
+}
+
+.btn {
+  width: 100%;
+  padding: 1rem 0;
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+  font-family: var(--ff-sans);
+  font-weight: var(--ff-sans-700);
+  font-size: 0.875rem;
+  text-align: center;
+  border: none;
+  border-radius: 7px;
+}
+
+.btn p {
+  color: hsl(0, 0%, 100%);
+  transform: translateX(-5px);
+}
+
+.btn svg {
+  transform: translateY(3px);
+  margin: 0 0.5rem;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .main-container {
+    width: 33rem;
+    height: 25rem;
+    flex-direction: row;
+    padding-bottom: 0;
+  }
+}
